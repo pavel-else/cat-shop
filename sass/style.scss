@@ -1,4 +1,22 @@
-.s1 {
+.tmp {
+	outline: 1px solid lightgray;
+}
+
+@font-face {
+	font-family: Exo; /* Exo 2.0 Thin Italic */
+	src: url(../fonts/Exo2.0-Thin.otf);
+	font-weight: normal; 
+  	font-style: normal; 
+}
+
+@font-face {
+	font-family: Trebuchet MS;
+	src: url(../fonts/Trebuchet-MS.ttf);
+	font-weight: normal; 
+  	font-style: normal; 
+}
+
+.body {
 	background-color: #abcabc;
 	position: fixed;
 	top: 0;
@@ -9,10 +27,52 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 14px;
+}
 
-	.s2 {
-		height: 50px;
-		width: 50px;
-		background-color: #fabfab;
-	} 
+.container {
+	min-height: 50px;
+	max-width: 1120px;
+	width: 1120px;
+}
+
+ .main-caption {
+	font-family: 'Exo';
+	font-size: 36px;
+	line-height: 50px;
+	margin: 0;
+	padding: 0;
+} 
+
+.product {
+	&__items {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.card {
+	&__top-text {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&__caption {
+		margin: 0;
+		padding: 0;
+	}
+
+	&__name {
+		font-size: 48px;
+		line-height: 52px;
+		font-weight: bold;		
+	}
+
+	&__filler {
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: bold;
+	}
 }
