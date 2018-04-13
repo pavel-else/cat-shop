@@ -29,6 +29,9 @@
   align-items: center;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   font-size: 14px;
+  background-color: #000;
+  background-image: url("../img/background.png");
+  background-size: cover;
 }
 
 .container {
@@ -41,6 +44,7 @@
   font-family: 'Exo';
   font-size: 36px;
   line-height: 50px;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -49,6 +53,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.card__wrap {
+  background-color: #f2f2f2;
 }
 
 .card__top-text {
@@ -71,4 +79,8 @@
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
+}
+
+.card__bottom-text {
+  color: #fff;
 }
