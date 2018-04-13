@@ -53,6 +53,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__item {
+  flex-basis: 320px;
 }
 
 .card__wrap {
@@ -79,6 +85,14 @@
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
+}
+
+.card__image {
+  min-height: 300px;
+  background-image: url("../img/kot_preview.png");
+  background-size: 320px auto;
+  background-position: 0px 60px;
+  background-repeat: no-repeat;
 }
 
 .card__bottom-text {
