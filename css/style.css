@@ -62,20 +62,31 @@
 }
 
 .card__wrap {
-  background-color: #f2f2f2;
+  background-image: url("../img/Back-default.png");
+  background-size: 100% 100%;
+  position: relative;
+  padding-bottom: 4px;
 }
 
 .card__top-text {
   font-size: 16px;
   line-height: 20px;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  margin-left: 50px;
 }
 
 .card__caption {
   margin: 0;
   padding: 0;
+  margin-left: 50px;
+  padding-top: 8px;
 }
 
 .card__name {
+  margin: 0;
+  padding: 0;
   font-size: 48px;
   line-height: 52px;
   font-weight: bold;
@@ -87,12 +98,42 @@
   font-weight: bold;
 }
 
+.card__description {
+  display: inline-block;
+  width: 130px;
+  margin: 0;
+  padding: 0;
+  margin-left: 50px;
+  padding-top: 12px;
+}
+
 .card__image {
   min-height: 300px;
   background-image: url("../img/kot_preview.png");
   background-size: 320px auto;
   background-position: 0px 60px;
   background-repeat: no-repeat;
+}
+
+.card__weight {
+  position: absolute;
+  bottom: 13px;
+  right: 15px;
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #1698d9;
+  color: #fff;
+  line-height: 22px;
+  font-size: 21px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.card__weight span {
+  font-size: 42px;
+  text-align: center;
 }
 
 .card__bottom-text {

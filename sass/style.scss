@@ -66,20 +66,31 @@
 
 .card {
 	&__wrap {
-		background-color: #f2f2f2;
+		background-image: url('../img/Back-default.png');
+		background-size: 100% 100%;
+		position: relative;
+		padding-bottom: 4px;
 	}
 
 	&__top-text {
 		font-size: 16px;
 		line-height: 20px;
+		margin: 0;
+		padding: 0;
+		padding-top: 20px;
+		margin-left: 50px;
 	}
 
 	&__caption {
 		margin: 0;
 		padding: 0;
+		margin-left: 50px;
+		padding-top: 8px;
 	}
 
 	&__name {
+		margin: 0;
+		padding: 0;
 		font-size: 48px;
 		line-height: 52px;
 		font-weight: bold;		
@@ -90,12 +101,43 @@
 		line-height: 30px;
 		font-weight: bold;
 	}
+
+	&__description {
+		display: inline-block;
+		width: 130px;
+		margin: 0;
+		padding: 0;
+		margin-left: 50px;
+		padding-top: 12px;
+	}
 	&__image {
 		min-height: 300px;
 		background-image: url('../img/kot_preview.png');
 		background-size: 320px auto;
 		background-position: 0px 60px;
 		background-repeat: no-repeat;
+	}
+
+	&__weight {
+		position: absolute;
+		bottom: 13px;
+		right: 15px;
+
+		width: 80px;
+		height: 80px;
+		box-sizing: border-box;
+
+		border-radius: 50%;
+		background-color: #1698d9;
+		color: #fff;
+		line-height: 22px;
+		font-size: 21px;
+		padding-top: 20px;
+		text-align: center;
+		span {
+			font-size: 42px;
+			text-align: center;
+		}
 	}
 
 	&__bottom-text {

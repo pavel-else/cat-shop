@@ -1,5 +1,6 @@
 var gulp = require('gulp'), // Подключаем Gulp
     sass = require('gulp-sass'); // Подключаем Sass пакет
+var browserSync = require('browser-sync');
 
 gulp.task('sass', function() { // Создаем таск "sass"
   return gulp.src(['sass/**/*.sass', 'sass/**/*.scss']) // Берем источник
@@ -10,5 +11,14 @@ gulp.task('sass', function() { // Создаем таск "sass"
 gulp.task('watch', function() {
   gulp.watch(['sass/**/*.sass', 'sass/**/*.scss'], ['sass']); // Наблюдение за sass файлами в папке sass
 });
+
+gulp.task('bs', function() {
+  	browserSync({
+ 		server: {
+ 			baseDir: './'
+ 		},
+  	})
+});
+
 
 gulp.task('default', ['watch']);
