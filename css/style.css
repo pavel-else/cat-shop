@@ -68,6 +68,7 @@
   background-size: 100% 100%;
   position: relative;
   padding-bottom: 4px;
+  cursor: pointer;
 }
 
 .card__top-text {
@@ -148,4 +149,32 @@
 
 .card__link {
   color: #1698d9;
+}
+
+.selected .card__wrap {
+  background-image: url("../img/Back-select.png");
+}
+
+.selected .card__weight {
+  background-color: #d91667;
+}
+
+.disabled .card__wrap {
+  background-image: url("../img/Back-disabled.png");
+  cursor: default;
+}
+
+.disabled .card__wrap::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Back-overlay.png");
+}
+
+.disabled .card__weight {
+  background-color: #b3b3b3;
 }
