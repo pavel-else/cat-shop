@@ -149,6 +149,8 @@
 .card__bottom-text {
   color: #fff;
   text-align: center;
+  line-height: 16px;
+  font-size: 13px;
 }
 
 .card__bottom-text--selected {
