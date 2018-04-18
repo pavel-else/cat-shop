@@ -80,6 +80,10 @@
   margin-left: 50px;
 }
 
+.card__top-text--selected {
+  display: none;
+}
+
 .card__caption {
   margin: 0;
   padding: 0;
@@ -147,6 +151,14 @@
   text-align: center;
 }
 
+.card__bottom-text--selected {
+  display: none;
+}
+
+.card__bottom-text--disabled {
+  display: none;
+}
+
 .card__link {
   color: #1698d9;
 }
@@ -155,8 +167,29 @@
   background-image: url("../img/Back-select.png");
 }
 
+.selected .card__top-text--selected {
+  display: block;
+  color: #e62e7a;
+}
+
+.selected .card__top-text--default {
+  display: none;
+}
+
 .selected .card__weight {
   background-color: #d91667;
+}
+
+.selected .card__bottom-text--default {
+  display: none;
+}
+
+.selected .card__bottom-text--selected {
+  display: block;
+}
+
+.selected .card__bottom-text--disabled {
+  display: none;
 }
 
 .disabled .card__wrap {
@@ -177,4 +210,17 @@
 
 .disabled .card__weight {
   background-color: #b3b3b3;
+}
+
+.disabled .card__bottom-text--default {
+  display: none;
+}
+
+.disabled .card__bottom-text--selected {
+  display: none;
+}
+
+.disabled .card__bottom-text--disabled {
+  display: block;
+  color: #ffff66;
 }

@@ -82,6 +82,9 @@
 		padding: 0;
 		padding-top: 20px;
 		margin-left: 50px;
+		&--selected {
+			display: none;
+		}
 	}
 
 	&__caption {
@@ -149,6 +152,12 @@
 	&__bottom-text {
 		color: #fff;
 		text-align: center;
+		&--selected {
+			display: none;
+		}
+		&--disabled {
+			display: none;
+		}
 	}
 
 	&__link {
@@ -159,9 +168,29 @@
 .selected {
 	.card__wrap {
 		background-image: url('../img/Back-select.png');
-	}	
+	}
+	.card__top-text {
+		&--selected {
+			display: block;
+			color: #e62e7a;
+		}
+		&--default {
+			display: none;
+		}
+	}
 	.card__weight {
 		background-color: #d91667; 
+	}
+	.card__bottom-text {
+		&--default {
+			display: none;
+		}
+		&--selected {
+			display: block;
+		}
+		&--disabled {
+			display: none;
+		}
 	}
 }
 
@@ -182,6 +211,18 @@
 	}	
 	.card__weight {
 		background-color: #b3b3b3; 
+	}
+	.card__bottom-text {
+		&--default {
+			display: none;
+		}
+		&--selected {
+			display: none;
+		}
+		&--disabled {
+			display: block;
+			color: #ffff66;
+		}
 	}
 
 }
