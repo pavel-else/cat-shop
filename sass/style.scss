@@ -62,7 +62,7 @@
 	}
 
 	&__item {
-		flex-basis: 320px;
+		width: 320px;
 	}
 }
 
@@ -226,5 +226,15 @@
 			color: #ffff66;
 		}
 	}
+}
 
+@media only screen and (max-width: 1199px) {
+	.product__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.product__item {
+		margin: 0 50px 50px;
+	}
 }

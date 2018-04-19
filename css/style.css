@@ -60,7 +60,7 @@
 }
 
 .product__item {
-  flex-basis: 320px;
+  width: 320px;
 }
 
 .card__wrap {
@@ -225,4 +225,15 @@
 .disabled .card__bottom-text--disabled {
   display: block;
   color: #ffff66;
+}
+
+@media only screen and (max-width: 1199px) {
+  .product__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .product__item {
+    margin: 0 50px 50px;
+  }
 }
