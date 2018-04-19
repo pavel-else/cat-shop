@@ -31,5 +31,12 @@ gulp.task('autoprefixer', () =>
         .pipe(gulp.dest('css'))
 );
 
+ 
+let cleanCSS = require('gulp-clean-css');
+gulp.task('minify', () => {
+  return gulp.src('css/style.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('css'));
+});
 
 gulp.task('default', ['watch']);
