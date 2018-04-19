@@ -68,11 +68,15 @@
 
 .card {
 	&__wrap {
-		background-image: url('../img/Back-default.png');
+		/* Множественный фон задан для того, чтобы исключить эффект мигания при наведении */
+		background-image: url('../img/Back-default.png'), url('../img/Back-default-hover.png');
 		background-size: 100% 100%;
 		position: relative;
 		padding-bottom: 4px;
 		cursor: pointer;
+		&:hover {
+			background-image: url('../img/Back-default-hover.png');
+		}
 	}
 
 	&__top-text {
@@ -148,6 +152,9 @@
 			text-align: center;
 		}
 	}
+	&__wrap:hover .card__weight {
+		background-color: #2ea8e6;
+	}
 
 	&__bottom-text {
 		color: #fff;
@@ -169,7 +176,10 @@
 
 .selected {
 	.card__wrap {
-		background-image: url('../img/Back-select.png');
+		background-image: url('../img/Back-select.png'), url('../img/Back-select-hover.png');
+		&:hover {
+			background-image: url('../img/Back-select-hover.png');
+		}
 	}
 	.card__top-text {
 		&--selected {
@@ -181,7 +191,10 @@
 		}
 	}
 	.card__weight {
-		background-color: #d91667; 
+		background-color: #d91667;
+	}
+	.card__wrap:hover .card__weight {
+		background-color: #e62e7a;
 	}
 	.card__bottom-text {
 		&--default {
@@ -213,6 +226,9 @@
 	}	
 	.card__weight {
 		background-color: #b3b3b3; 
+	}
+	.card__wrap:hover .card__weight {
+		background-color: #b3b3b3;
 	}
 	.card__bottom-text {
 		&--default {

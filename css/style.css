@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .tmp {
   outline: 1px solid lightgray;
 }
@@ -64,11 +65,16 @@
 }
 
 .card__wrap {
-  background-image: url("../img/Back-default.png");
+  /* Множественный фон задан для того, чтобы исключить эффект мигания при наведении */
+  background-image: url("../img/Back-default.png"), url("../img/Back-default-hover.png");
   background-size: 100% 100%;
   position: relative;
   padding-bottom: 4px;
   cursor: pointer;
+}
+
+.card__wrap:hover {
+  background-image: url("../img/Back-default-hover.png");
 }
 
 .card__top-text {
@@ -146,6 +152,10 @@
   text-align: center;
 }
 
+.card__wrap:hover .card__weight {
+  background-color: #2ea8e6;
+}
+
 .card__bottom-text {
   color: #fff;
   text-align: center;
@@ -166,7 +176,11 @@
 }
 
 .selected .card__wrap {
-  background-image: url("../img/Back-select.png");
+  background-image: url("../img/Back-select.png"), url("../img/Back-select-hover.png");
+}
+
+.selected .card__wrap:hover {
+  background-image: url("../img/Back-select-hover.png");
 }
 
 .selected .card__top-text--selected {
@@ -180,6 +194,10 @@
 
 .selected .card__weight {
   background-color: #d91667;
+}
+
+.selected .card__wrap:hover .card__weight {
+  background-color: #e62e7a;
 }
 
 .selected .card__bottom-text--default {
@@ -211,6 +229,10 @@
 }
 
 .disabled .card__weight {
+  background-color: #b3b3b3;
+}
+
+.disabled .card__wrap:hover .card__weight {
   background-color: #b3b3b3;
 }
 
