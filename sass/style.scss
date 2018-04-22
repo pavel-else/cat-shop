@@ -16,24 +16,11 @@
   	font-style: normal; 
 }
 
-@media only screen and (max-width: 1199px) {
-	.product__items {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-	}
-	.product__item {
-		margin: 0 50px 50px;
-	}
-}
-
 .body {
 	background-color: #abcabc;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: scroll;
 
 	display: flex;
 	justify-content: center;
@@ -252,5 +239,16 @@
 			display: block;
 			color: #ffff66;
 		}
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.product__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.product__item {
+		margin: 0 30px 50px;
 	}
 }
