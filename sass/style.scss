@@ -11,6 +11,7 @@
 
 @font-face {
 	font-family: Trebuchet MS;
+	src: local(Trebuchet MS);
 	src: url(../fonts/Trebuchet-MS.ttf);
 	font-weight: normal; 
   	font-style: normal; 
@@ -246,7 +247,7 @@
 	.product__items {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-around;
 	}
 	.product__item {
 		margin: 0 30px 50px;

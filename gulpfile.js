@@ -3,6 +3,7 @@ var gulp = require('gulp'), // Подключаем Gulp
 var browserSync = require('browser-sync');
 const autoprefixer = require('gulp-autoprefixer');
 let cleanCSS = require('gulp-clean-css');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('sass', function() { // Создаем таск "sass"
   return gulp.src(['sass/**/*.sass', 'sass/**/*.scss']) // Берем источник
@@ -38,5 +39,22 @@ gulp.task('minify', () => {
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('css'));
 });
+
+ 
+gulp.task('imagemin', () =>
+    gulp.src('img/*')
+        .pipe(imagemin([
+    		imagemin.gifsicle({interlaced: true}),
+    		imagemin.jpegtran({progressive: true}),
+    		imagemin.optipng({optimizationLevel: 5}),
+    		imagemin.svgo({
+		        plugins: [
+		            {removeViewBox: true},
+		            {cleanupIDs: false}
+		        ]
+    		})
+		]))
+        .pipe(gulp.dest('img'))
+);
 
 gulp.task('default', ['watch']);
