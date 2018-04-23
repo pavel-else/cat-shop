@@ -183,12 +183,12 @@
   background-image: url("../img/Back-select-hover.png");
 }
 
-.selected:hover .card__top-text--selected {
+.selected .card__wrap:hover .card__top-text--selected {
   display: block;
   color: #e62e7a;
 }
 
-.selected:hover .card__top-text--default {
+.selected .card__wrap:hover .card__top-text--default {
   display: none;
 }
 
