@@ -4,6 +4,7 @@ var browserSync = require('browser-sync');
 const autoprefixer = require('gulp-autoprefixer');
 let cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
+var autopolyfiller = require('gulp-autopolyfiller');
 
 gulp.task('sass', function() { // Создаем таск "sass"
   return gulp.src(['sass/**/*.sass', 'sass/**/*.scss']) // Берем источник
@@ -56,5 +57,13 @@ gulp.task('imagemin', () =>
 		]))
         .pipe(gulp.dest('img'))
 );
+
+
+gulp.task('polyfill', function () {
+    return gulp.src('js/scripts.js')
+        .pipe(autopolyfiller('result_polyfill_file.js'))
+        .pipe(gulp.dest('js'));
+});
+
 
 gulp.task('default', ['watch']);

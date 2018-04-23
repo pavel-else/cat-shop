@@ -112,7 +112,7 @@
 
 .card__description {
   display: inline-block;
-  width: 130px;
+  width: 150px;
   min-height: 55px;
   margin: 0;
   padding: 0;
@@ -156,6 +156,7 @@
 }
 
 .card__bottom-text {
+  min-height: 50px;
   color: #fff;
   text-align: center;
   line-height: 16px;
