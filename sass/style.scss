@@ -181,7 +181,7 @@
 			background-image: url('../img/Back-select-hover.png');
 		}
 	}
-	.card__top-text {
+	&:hover .card__top-text {
 		&--selected {
 			display: block;
 			color: #e62e7a;
