@@ -36,12 +36,11 @@ html {
   font-family: "Trebuchet MS", sans-serif;
   font-size: 14px;
   background-color: #000;
-  background-image: url("../img/background.png");
+  background-image: url("../img/background-sh.png"), url("../img/background.png");
   background-size: cover;
 }
 
 .container {
-  min-height: 100vh;
   max-width: 1120px;
   width: 1120px;
 }
@@ -87,8 +86,8 @@ html {
   line-height: 20px;
   margin: 0;
   padding: 0;
-  padding-top: 20px;
-  margin-left: 50px;
+  padding-top: 21px;
+  margin-left: 49px;
 }
 
 .card__top-text--selected {
@@ -98,39 +97,40 @@ html {
 .card__caption {
   margin: 0;
   padding: 0;
-  margin-left: 50px;
-  padding-top: 8px;
+  margin-left: 47px;
+  padding-top: 6px;
 }
 
 .card__name {
   margin: 0;
   padding: 0;
-  font-size: 48px;
+  font-size: 47px;
   line-height: 52px;
   font-weight: bold;
+  letter-spacing: 2.4px;
 }
 
 .card__filler {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 28px;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-left: 2px;
 }
 
 .card__description {
   display: inline-block;
   width: 150px;
   min-height: 55px;
-  margin: 0;
-  padding: 0;
-  margin-left: 50px;
-  padding-top: 12px;
+  margin: 0 0 0px 50px;
+  padding: 15px 0 0;
 }
 
 .card__image {
-  min-height: 280px;
+  min-height: 279px;
   background-image: url("../img/kot_preview.png");
-  background-size: 360px auto;
-  background-position: -22px 10px;
+  background-size: 370px auto;
+  background-position: -28px 11px;
   background-repeat: no-repeat;
   margin-left: 4px;
   border-radius: 10px;
@@ -138,8 +138,8 @@ html {
 
 .card__weight {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
+  bottom: 16px;
+  right: 16px;
   width: 80px;
   height: 80px;
   box-sizing: border-box;
@@ -148,7 +148,7 @@ html {
   color: #fff;
   line-height: 22px;
   font-size: 21px;
-  padding-top: 20px;
+  padding-top: 21px;
   text-align: center;
 }
 
@@ -179,6 +179,8 @@ html {
 
 .card__link {
   color: #1698d9;
+  text-decoration: none;
+  border-bottom: 1px dashed #1698d9;
 }
 
 .selected .card__wrap {
